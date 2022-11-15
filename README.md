@@ -6,7 +6,7 @@ import tkinter.messagebox
 from tkinter.constants import SUNKEN
  
 window = tk.Tk()
-window.title('Calculator-GeeksForGeeks')
+window.title('Calculator - Geeks ForGeeks')
 frame = tk.Frame(master=window, bg="skyblue", padx=10)
 frame.pack()
 entry = tk.Entry(master=frame, relief=SUNKEN, borderwidth=3, width=30)
@@ -19,9 +19,9 @@ def myclick(number):
  
 def equal():
     try:
-        y = str(eval(entry.get()))
+        x = str(eval(entry.get()))
         entry.delete(0, tk.END)
-        entry.insert(0, y)
+        entry.insert(0, x)
     except:
         tkinter.messagebox.showinfo("Error", "Syntax Error")
  
@@ -61,11 +61,11 @@ button_0 = tk.Button(master=frame, text='0', padx=15,
                      pady=5, width=3, command=lambda: myclick(0))
 button_0.grid(row=4, column=1, pady=2)
  
-button_add = tk.Button(master=frame, text="+", padx=15,
+button_addition = tk.Button(master=frame, text="+", padx=15,
                        pady=5, width=3, command=lambda: myclick('+'))
 button_add.grid(row=5, column=0, pady=2)
  
-button_subtract = tk.Button(
+button_subtraction = tk.Button(
     master=frame, text="-", padx=15, pady=5, width=3, command=lambda: myclick('-'))
 button_subtract.grid(row=5, column=1, pady=2)
  
